@@ -16,4 +16,9 @@
 .todoItem > span {
   flex: 1;
   padding: 0.5rem;
+
+  /* if a long string without space is entered
+   * then the UI should not break
+   * the string will be limited to 60 char anyways*/
+  overflow: hidden;
 }
