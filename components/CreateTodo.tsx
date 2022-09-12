@@ -1,5 +1,7 @@
 import { Todo } from "../utils/interfaces";
 
+import styles from "../styles/CreateTodo.module.css";
+
 interface Props {
   onFormSubmit: (todo: Todo) => void;
 }
@@ -30,7 +32,7 @@ const CreateTodo = ({ onFormSubmit }: Props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.todoForm} onSubmit={handleSubmit}>
       <label htmlFor="todo">Enter task</label>
       <input name="todo" type="text" required />
       <button type="submit">Add</button>

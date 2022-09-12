@@ -24,12 +24,12 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className={styles.main}>
-        <h1 className={styles.title}>Open Todo</h1>
-        <h2>Share your todo list with the world</h2>
-      </header>
+      {/* <header className={styles.main}> */}
+      {/*   <h1 className={styles.title}>Open Todo</h1> */}
+      {/*   <h2>Share your todo list with the world</h2> */}
+      {/* </header> */}
 
-      <main>
+      <main className={styles.main}>
         <CreateTodo onFormSubmit={handleFormSubmit} />
         <TodoList todos={todos} />
       </main>

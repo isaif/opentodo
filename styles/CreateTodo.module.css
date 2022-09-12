@@ -1,0 +1,15 @@
+.todoForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoForm > * {
+  margin: 0.4rem;
+}
+
+.todoForm > input {
+  padding: 0.5rem;
+  width: 100%;
+}
