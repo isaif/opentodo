@@ -1,7 +1,7 @@
 import { Todo } from "../utils/interfaces";
 import { TodoItem } from "./TodoItem";
 
-interface TodoListProps {
+interface Props {
   todos: Todo[];
 }
 
