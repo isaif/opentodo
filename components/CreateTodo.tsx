@@ -31,7 +31,8 @@ const CreateTodo = ({ onFormSubmit }: Props) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input name="todo" type="text" placeholder="Add your todo" required />
+      <label htmlFor="todo">Enter task</label>
+      <input name="todo" type="text" required />
       <button type="submit">Add</button>
     </form>
   );
