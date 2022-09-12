@@ -2,10 +2,3 @@
   width: 100%;
   padding: 0;
 }
-
-.todoList > li {
-  list-style-type: none;
-  padding: 0.5rem;
-  background: grey;
-  margin: 0.4rem 0;
-}
