@@ -17,6 +17,14 @@ const Home: NextPage = () => {
     setTodos((previousTodos) => [...previousTodos, todo]);
   };
 
+  const handleCheckBox = (id: number) => {
+    const newTodo = todos.map((todo) => {
+      if (todo.id === id) return { ...todo, completed: !todo.completed };
+      return todo;
+    });
+    setTodos(newTodo);
+  };
+
   return (
     <>
       <Navbar />
@@ -34,7 +42,7 @@ const Home: NextPage = () => {
 
         <main className={styles.main}>
           <CreateTodo onFormSubmit={handleFormSubmit} />
-          <TodoList todos={todos} />
+          <TodoList todos={todos} handleCheckBox={handleCheckBox} />
         </main>
       </div>
     </>
