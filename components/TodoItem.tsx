@@ -14,7 +14,7 @@ export const TodoItem = ({ todo, handleCheckBox }: Props) => {
         type="checkbox"
         checked={todo.completed}
         className={styles.checkbox}
-        onClick={() => handleCheckBox(todo.id)}
+        onChange={() => handleCheckBox(todo.id)}
       />
       <span>{todo.name}</span>
     </li>
