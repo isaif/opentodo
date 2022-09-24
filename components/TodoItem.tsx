@@ -17,8 +17,8 @@ export const TodoItem = ({ todo, handleCheckBox, handleDelete }: Props) => {
         className={styles.checkbox}
         onChange={() => handleCheckBox(todo.id)}
       />
-      <button onClick={() => handleDelete(todo.id)}>delete</button>
       <span>{todo.name}</span>
+      <button onClick={() => handleDelete(todo.id)}>delete</button>
     </li>
   );
 };
