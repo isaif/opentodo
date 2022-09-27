@@ -2,7 +2,7 @@ import { Todo } from "../utils/interfaces";
 
 import styles from "../styles/TodoItem.module.css";
 import { useState } from "react";
-import CreateTodoForm from "./CreateTodoForm";
+import TodoForm from "./TodoForm";
 
 interface Props {
   todo: Todo;
@@ -39,7 +39,7 @@ export const TodoItem = ({
   );
 
   const editingView = (
-    <CreateTodoForm
+    <TodoForm
       onFormSubmit={onEditComplete}
       submitButtonName="Done"
       styles={styles}

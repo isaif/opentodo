@@ -1,5 +1,5 @@
 import { Todo } from "../utils/interfaces";
-import CreateTodoForm from "./CreateTodoForm";
+import TodoForm from "./TodoForm";
 
 import styles from "../styles/CreateTodo.module.css";
 
@@ -18,7 +18,7 @@ const CreateTodo = ({ onFormSubmit }: Props) => {
   };
 
   return (
-    <CreateTodoForm
+    <TodoForm
       onFormSubmit={CreateTodo}
       submitButtonName="Add"
       label="Enter your task"

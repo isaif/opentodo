@@ -13,12 +13,7 @@ interface TodoFormElement extends HTMLFormElement {
   readonly elements: FormElements;
 }
 
-const CreateTodoForm = ({
-  onFormSubmit,
-  submitButtonName,
-  label,
-  styles,
-}: Props) => {
+const TodoForm = ({ onFormSubmit, submitButtonName, label, styles }: Props) => {
   const handleSubmit = (e: React.FormEvent<TodoFormElement>) => {
     e.preventDefault();
 
@@ -38,4 +33,4 @@ const CreateTodoForm = ({
   );
 };
 
-export default CreateTodoForm;
+export default TodoForm;
