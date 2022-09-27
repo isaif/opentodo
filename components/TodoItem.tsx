@@ -33,8 +33,8 @@ export const TodoItem = ({
         onChange={() => handleCheckBox(todo.id)}
       />
       <span>{todo.name}</span>
-      <button onClick={() => handleDelete(todo.id)}>Delete</button>
       <button onClick={() => setShowEditForm(!showEditForm)}>Edit</button>
+      <button onClick={() => handleDelete(todo.id)}>Delete</button>
     </>
   );
 
