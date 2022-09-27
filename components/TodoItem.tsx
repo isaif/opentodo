@@ -43,6 +43,7 @@ export const TodoItem = ({
       onFormSubmit={onEditComplete}
       submitButtonName="Done"
       styles={styles}
+      inputValue={todo.name}
     />
   );
 
