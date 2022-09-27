@@ -1,11 +1,8 @@
-import { Todo } from "../utils/interfaces";
-
-import styles from "../styles/CreateTodoForm.module.css";
-
 interface Props {
-  onFormSubmit: (todo: Todo) => void;
+  onFormSubmit: (todo: string) => void;
   submitButtonName: string;
   label?: string;
+  styles: any;
 }
 
 interface FormElements extends HTMLFormControlsCollection {
@@ -16,20 +13,19 @@ interface TodoFormElement extends HTMLFormElement {
   readonly elements: FormElements;
 }
 
-const CreateTodoForm = ({ onFormSubmit, submitButtonName, label }: Props) => {
+const CreateTodoForm = ({
+  onFormSubmit,
+  submitButtonName,
+  label,
+  styles,
+}: Props) => {
   const handleSubmit = (e: React.FormEvent<TodoFormElement>) => {
     e.preventDefault();
 
     const form = e.currentTarget;
     const todoValue = form.elements.todo.value;
 
-    const newTodo: Todo = {
-      id: Math.floor(Math.random() * 100),
-      name: todoValue,
-      completed: false,
-    };
-
-    onFormSubmit(newTodo);
+    onFormSubmit(todoValue);
     form.reset();
   };
 
