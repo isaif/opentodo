@@ -32,6 +32,15 @@ const Home: NextPage = () => {
     setTodos(newTodo);
   };
 
+  const handleEdit = (id: number, value: string) => {
+    console.log(id, value);
+    const newTodo = todos.map((todo) => {
+      if (todo.id === id) return { ...todo, name: value };
+      return todo;
+    });
+    setTodos(newTodo);
+  };
+
   return (
     <>
       <Navbar />
@@ -53,6 +62,7 @@ const Home: NextPage = () => {
             todos={todos}
             handleCheckBox={handleCheckBox}
             handleDelete={handleDelete}
+            handleEdit={handleEdit}
           />
         </main>
       </div>

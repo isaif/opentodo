@@ -26,3 +26,17 @@
    * the string will be limited to 60 char anyways*/
   overflow: hidden;
 }
+
+.todoForm {
+  display: flex;
+  flex: 1;
+}
+
+.todoForm > * {
+  margin: 0.4rem;
+}
+
+.todoForm > input {
+  padding: 0.5rem;
+  width: 100%;
+}
